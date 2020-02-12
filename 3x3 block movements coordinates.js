@@ -65,7 +65,7 @@ function allMovements(player, orderSet){
   }
   }
 }
-//RunCode: example
+//RunCode: example!
 allMovements(thePlayer, "ld");
 
 console.log(thePlayer.path);
