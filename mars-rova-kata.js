@@ -61,5 +61,5 @@ let marsRover = {
     }
     console.log(`The current position is x:${rover.x} and y: ${rover.y}`);
   }
-  moveForward(marsRover, turnRight)
+  moveForward(marsRover, turnLeft);
   
