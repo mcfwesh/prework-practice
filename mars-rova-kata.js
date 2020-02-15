@@ -1,7 +1,7 @@
 let marsRover = {
-  direction: "",
-  x: 1,
-  y: 1,
+  direction: "N",
+  x: 2,
+  y: 4,
   travelLog: [{x: 0, y: 0}]
 }
 
@@ -103,7 +103,8 @@ switch (rover.direction){
                 }
                 break;
 }
-console.log(`Turns ${rover.direction}. The new position is x:${rover.x} and y: ${rover.y}`);
+
+console.log(`Turns ${rover.direction}. The current position is x:${rover.x} and y: ${rover.y}`);
 let newPosition = {x: rover.x, y: rover.y};
 rover.travelLog.push(newPosition);
 } else{
@@ -158,9 +159,14 @@ function moveBackward(rover, command){
 function allDirections (rover, commandSet){
 for (let i = 0; i < commandSet.length; i++){
   let eachCommand = commandSet[i];
+  let theObstacle = [2, 3];
   switch (eachCommand){
     case "f":
-      moveForward(rover, eachCommand);
+      if (rover.x === theObstacle[0] & rover.y === theObstacle[1]){
+        console.log("Obstruction!")
+      }else{
+        moveForward(rover, eachCommand);
+      }   
       break;
       case "b":
         moveBackward(rover, eachCommand);
@@ -174,12 +180,29 @@ for (let i = 0; i < commandSet.length; i++){
   }
 
 }
-
+checkRover(rover);
   }
 
-allDirections(marsRover, "f");
-for (let i = 0; i < marsRover.travelLog.length; i++){
-  console.log(`Path ${i}: x= ${marsRover.travelLog[i].x}, y= ${marsRover.travelLog[i].y}`)
-}
+allDirections(marsRover, "ff");
+
+// function checkRover (rover){
+// for (let i = 0; i < rover.travelLog.length; i++){
+//   let theObstacle = [2, 3];
+  
+// console.log(`Path ${i}: x= ${rover.travelLog[i].x}, y= ${rover.travelLog[i].y}`)
+// }
+// }
+
 
 //obstacles
+// function obstacles (){
+//   let values = []
+//   for (let x = 0; x < 7; x++){
+//    values.push([
+//     Math.floor(Math.random() * 10),
+//     x,
+//    ])
+//   }
+//   return values;  
+// }
+// console.table(obstacles()[1])
