@@ -34,10 +34,12 @@ h4{
   size: 1.5em;
   letter-spacing: 0.4px;
   line-height: 1em;
+  margin: 15px;
 }
 h5{
   size: 1.2em;
   line-height: 1em;
+  margin: 0;
 }
 .nav-bar{
  background: rgb(25, 33, 41);
@@ -80,7 +82,6 @@ h5{
   font-weight: 100;
   text-align: center;
   margin: 20px 0;
-  border: 1px solid white;
 }
 .link-btn{
   background: rgb(67, 163, 230);
@@ -106,6 +107,10 @@ h5{
 .service-box img{
   width: 125px;
 }
+#team{
+  padding: 75px 0;
+  margin: 0 auto;
+}
 #team .section-text{
   font-size: 1.9em;
   text-align: center;
@@ -118,13 +123,32 @@ h5{
   width: 250px;
   height: 180px;
 }
+#team p{
+  width: 60%;
+  margin: 10px auto;
+}
+#team hr{
+  margin: 20px auto 30px auto;
+  width: 40%;
+}
+.schedule-table{
+  margin: 0 auto 40px auto;
+}
+.schedule-table th, td{
+  border-bottom: 1px solid black;
+  padding: 5px 10px;
+  text-align: center;
+}
 .address{
   font-style: normal;
   font-size: 0.8em;
+  margin-bottom: 30px;
 }
 .footer{
   text-align: center;
   font-size: 1.9em;
+  padding: 40px 100px;
+  margin-bottom: 25px;
 }
 .footer a{
   text-decoration: none;
@@ -133,4 +157,5 @@ h5{
 }
 .footer ul{
   list-style-type: none;
+  padding: 0;
 }
