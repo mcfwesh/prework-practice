@@ -16,6 +16,7 @@ h1{
   font-size: 9em;
   text-align: center;
   text-transform: uppercase;
+  line-height:
 }
 h2{
   font-size: 5em;
@@ -61,12 +62,13 @@ h5{
   list-style-type: none;
 }
 .header{
-  background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-background.jpg");
-  position: 0, 0;
-  size: cover;
-  repeat: no-repeat;
-  padding-top: 50px;
-  position: relative;
+background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-background.jpg");
+ background-position: 0 0;
+ background-size: cover;
+ background-repeat: no-repeat;
+ padding-top: 20px;
+ position: relative;
+ height: 650px;
 }
 .container{
   width: 1200px;
@@ -81,7 +83,7 @@ h5{
   font-size: 2.5em;
   position: absolute;
   left: 10%;
-  bottom: 100px;
+  bottom: 40px;
 }
 .dark-background{
   background: rgb(25, 33, 41);
@@ -201,4 +203,27 @@ align-items: center;
 .map-frame{
   height: 375px;
   width: 60%;
+}
+.slot-form-container{
+  width: 40%;
+  margin:18px auto 0 auto;
+  font-size: 1.5em;
+  text-align: center;
+}
+.slot-form-container label{
+  line-height: 15px;
+  margin: 5px;
+}
+.slot-form-container input, selector{
+  height: 20px;
+  outline: none;
+  padding: 3px;
+  width: 100%;
+}
+.submit-btn{
+border: 1px solid black;
+color: black;
+background-color: white;
+padding: 9px;
+margin on the top: 15px;
 }
