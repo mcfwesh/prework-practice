@@ -13,12 +13,12 @@ h1, h2, h3, h4, h5, h6{
   font-family: Roboto Condensed;
 }
 h1{
-  size: 9em;
+  font-size: 9em;
   text-align: center;
   text-transform: uppercase;
 }
 h2{
-  size: 5em;
+  font-size: 5em;
   text-align: center;
   text-transform: uppercase;
   line-height: 4em;
@@ -26,18 +26,18 @@ h2{
   text-shadow: #020819 8px -20px 9px;
 }
 h3{
-  size: 4.2em;
+  font-size: 4.2em;
   text-align: center;
   line-height: 1em;
 }
 h4{
-  size: 1.5em;
+  font-size: 1.5em;
   letter-spacing: 0.4px;
   line-height: 1em;
   margin: 15px;
 }
 h5{
-  size: 1.2em;
+  font-size: 1.2em;
   line-height: 1em;
   margin: 0;
 }
@@ -53,6 +53,8 @@ h5{
 .nav-bar-ul{
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 .nav-bar-ul li{
   text-align: center;
@@ -64,14 +66,22 @@ h5{
   size: cover;
   repeat: no-repeat;
   padding-top: 50px;
+  position: relative;
 }
 .container{
   width: 1200px;
   margin: 0 auto;
   padding: 75px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
 }
 .header aside{
   font-size: 2.5em;
+  position: absolute;
+  left: 10%;
+  bottom: 100px;
 }
 .dark-background{
   background: rgb(25, 33, 41);
@@ -91,6 +101,7 @@ h5{
   letter-spacing: 0.5px;
   text-align: center;
   text-decoration: none;
+  padding: 10px 30px;
 }
 .service-box{
   text-align:center;
@@ -149,6 +160,9 @@ h5{
   font-size: 1.9em;
   padding: 40px 100px;
   margin-bottom: 25px;
+  display: flex;
+justify-content: space-between;
+align-items: center;
 }
 .footer a{
   text-decoration: none;
@@ -158,4 +172,33 @@ h5{
 .footer ul{
   list-style-type: none;
   padding: 0;
+}
+footer > div{
+  display: flex;
+  flex-direction: column;
+}
+#general-information{
+  display: flex;
+  justify-content: space-evenly;
+}
+#structure > div{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+#team > div > article{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+#team > div{
+  display: flex;
+  justify-content: space-evenly;
+}
+.map-frame{
+  height: 375px;
+  width: 60%;
 }
