@@ -1,3 +1,4 @@
+//Rover Object
 let marsRover = {
   direction: "N",
   x: 2,
@@ -5,6 +6,11 @@ let marsRover = {
   travelLog: [{x: 0, y: 0}]
 }
 
+//Left-turning Control of the Rover
+/* N: North
+  E: East,
+  W: West
+  S: South*/
 function turnLeft (rover, command){
 if (command === "l") {  
   switch (rover.direction){
@@ -32,6 +38,7 @@ return rover.direction;
 }
 turnLeft (marsRover)
 
+//Right-turning control of the Rover
 function turnRight (rover, command){
 if (command === "r") {  
     switch (rover.direction){
@@ -57,19 +64,8 @@ if (command === "r") {
 }
 return rover.direction;
   }
-//   function turnDirection(rover, command){
-//     for (let i = 0; i < command.length; i++){
-//       switch (command[i]){
-//         case "l":
-//           turnLeft(rover);
-//           break;
-//           case "r":
-//             turnRight(rover);
-//             break;
-//       }
-//     }
-//   }
-// turnDirection(marsRover, "rrr")
+
+//Forward Control of the Rover
 function moveForward(rover, command){
 if (command === "f"){
 if ((rover.x >= 0 && rover.x <= 9) && (rover.y >= 0 && rover.y <= 9)){
@@ -114,6 +110,7 @@ rover.travelLog.push(newPosition);
 
 }
 
+//Backward Control of the Rover
 function moveBackward(rover, command){
   if (command === "b"){
     if ((rover.x >= 0 && rover.x <= 9) && (rover.y >= 0 && rover.y <= 9)){
@@ -156,6 +153,8 @@ function moveBackward(rover, command){
     }
     
     }
+
+    //Master Control of the Rover
 function allDirections (rover, commandSet){
 for (let i = 0; i < commandSet.length; i++){
   let eachCommand = commandSet[i];
@@ -185,13 +184,14 @@ checkRover(rover);
 
 allDirections(marsRover, "ff");
 
-// function checkRover (rover){
-// for (let i = 0; i < rover.travelLog.length; i++){
-//   let theObstacle = [2, 3];
+//Checking Rover's Paths
+function checkRover (rover){
+for (let i = 0; i < rover.travelLog.length; i++){
+  // let theObstacle = [2, 3];
   
-// console.log(`Path ${i}: x= ${rover.travelLog[i].x}, y= ${rover.travelLog[i].y}`)
-// }
-// }
+console.log(`Path ${i}: x= ${rover.travelLog[i].x}, y= ${rover.travelLog[i].y}`)
+}
+}
 
 
 //obstacles
